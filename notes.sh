@@ -5,6 +5,7 @@ ami=ami-876844ee
 ec2-run-instances $ami \
     --key chrisconley-io \
     --instance-type t1.micro \
+    -g sg-b54d6cde \
     -b /dev/sda=:8:true # true deletes volume on termination
 
 ec2-describe-instances
